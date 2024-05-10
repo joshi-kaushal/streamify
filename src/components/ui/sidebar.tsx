@@ -117,12 +117,14 @@ export const MobileSidebar = ({
 				)}
 				{...props}
 			>
-				<div className="z-20 flex justify-end w-full">
-					<RxHamburgerMenu
-						className="text-neutral-800 "
-						onClick={() => setOpen(!open)}
-					/>
+
+				<div
+					className="z-20 flex justify-end w-full"
+					onClick={() => setOpen(!open)}
+				>
+					{open ? <RxCross2 /> : <RxHamburgerMenu />}
 				</div>
+
 				<AnimatePresence>
 					{open && (
 						<motion.div
@@ -138,12 +140,6 @@ export const MobileSidebar = ({
 								className
 							)}
 						>
-							<div
-								className="absolute z-50 right-10 top-10 text-neutral-800 "
-								onClick={() => setOpen(!open)}
-							>
-								<RxCross2 />
-							</div>
 							{children}
 						</motion.div>
 					)}
