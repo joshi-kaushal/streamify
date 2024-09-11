@@ -24,6 +24,8 @@ export default function RevenueDistribution() {
 			description="January - September 2024"
 			footerDescription="Showing total revenue in year 2024."
 			footerTitle={<>Revenue decreased by 3.2% than last year <TrendingDown className="w-4 h-4" /></>}
+			data={REVENUE_DISTRIBUTION}
+			fileName="Revenue Distribution"
 		>
 			<ChartContainer
 				config={chartConfig}

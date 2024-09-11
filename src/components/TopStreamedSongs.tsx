@@ -19,6 +19,8 @@ export default function TopStreamedSongs() {
 			description="January - September 2024"
 			footerTitle={<>Trending up by 5.2% this month <TrendingUp className="w-4 h-4" /></>}
 			footerDescription="Showing most streamed songs"
+			data={TOP_STREAMING_SONGS}
+			fileName="Top streaming songs"
 		>
 			<ChartContainer config={chartConfig}>
 				<BarChart

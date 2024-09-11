@@ -19,6 +19,8 @@ export default function UserGrowth() {
 			description="January - September 2024"
 			footerTitle={<>Trending up by 5.2% this month <TrendingUp className="w-4 h-4" /></>}
 			footerDescription="Showing the user growth wrt all users and active users"
+			data={USER_GROWTH}
+			fileName="User Growth"
 		>
 			<ChartContainer config={chartConfig}>
 				<AreaChart

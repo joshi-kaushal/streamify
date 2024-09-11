@@ -54,6 +54,8 @@ export default function RecentStreams() {
 		<ChartWrapper
 			header="Recent streams"
 			description='Click on the table header to sort table based on the column'
+			data={RECENT_STREAMS}
+			fileName='Recent Streams'
 		>
 			<div className="flex flex-col gap-2 mb-4 md:flex-row">
 				<input
