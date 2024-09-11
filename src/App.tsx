@@ -1,6 +1,7 @@
 import Navbar from "./components/common/Navbar";
 import SidebarApp from "./components/common/Sidebar";
 import KeyMetrics from "./components/KeyMetrics";
+import RecentStreams from "./components/RecentStreams";
 import RevenueDistribution from "./components/RevenueDistribution";
 import TopStreamedSongs from "./components/TopStreamedSongs";
 import UserGrowth from "./components/UserGrowth";
@@ -18,6 +19,8 @@ export default function App() {
         <UserGrowth />
         <RevenueDistribution />
         <TopStreamedSongs />
+        <TopStreamedSongs />
+        <RecentStreams />
       </main>
     </div>
   )
