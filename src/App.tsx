@@ -19,7 +19,6 @@ export default function App() {
         <UserGrowth />
         <RevenueDistribution />
         <TopStreamedSongs />
-        <TopStreamedSongs />
         <RecentStreams />
       </main>
     </div>

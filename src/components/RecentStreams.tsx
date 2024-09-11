@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
 import { RECENT_STREAMS } from '@/data/MockData'
+import ChartWrapper from './common/ChartWrapper'
 
 type SortableColumns = "songName" | "artist" | "streamDate" | "streamCount"
 
@@ -50,7 +51,10 @@ export default function RecentStreams() {
 	}
 
 	return (
-		<>
+		<ChartWrapper
+			header="Recent streams"
+			description='Click on the table header to sort table based on the column'
+		>
 			<div className="flex flex-col gap-2 mb-4 md:flex-row">
 				<input
 					type="text"
@@ -114,6 +118,6 @@ export default function RecentStreams() {
 					</TableBody>
 				</Table>
 			</div>
-		</>
+		</ChartWrapper>
 	)
 }
