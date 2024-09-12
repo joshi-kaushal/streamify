@@ -7,7 +7,6 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table"
-import { Button } from "@/components/ui/button"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
 import { RECENT_STREAMS } from '@/data/MockData'
@@ -78,28 +77,28 @@ export default function RecentStreams() {
 					<TableHeader>
 						<TableRow>
 							<TableHead>
-								<Button variant="ghost" onClick={() => handleSort('songName')}>
+								<button className='flex items-center' onClick={() => handleSort('songName')}>
 									Song Name
 									{sortColumn === 'songName' && (sortDirection === 'asc' ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />)}
-								</Button>
+								</button>
 							</TableHead>
 							<TableHead>
-								<Button variant="ghost" onClick={() => handleSort('artist')}>
+								<button className='flex items-center' onClick={() => handleSort('artist')}>
 									Artist
 									{sortColumn === 'artist' && (sortDirection === 'asc' ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />)}
-								</Button>
+								</button>
 							</TableHead>
 							<TableHead>
-								<Button variant="ghost" onClick={() => handleSort('streamDate')}>
+								<button className='flex items-center' onClick={() => handleSort('streamDate')}>
 									Date Streamed
 									{sortColumn === 'streamDate' && (sortDirection === 'asc' ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />)}
-								</Button>
+								</button>
 							</TableHead>
 							<TableHead>
-								<Button variant="ghost" onClick={() => handleSort('streamCount')}>
+								<button className='flex items-center' onClick={() => handleSort('streamCount')}>
 									Stream Count
 									{sortColumn === 'streamCount' && (sortDirection === 'asc' ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />)}
-								</Button>
+								</button>
 							</TableHead>
 							<TableHead>User ID</TableHead>
 						</TableRow>

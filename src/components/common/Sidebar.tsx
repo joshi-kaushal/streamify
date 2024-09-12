@@ -1,40 +1,54 @@
-import { MdDataArray } from "react-icons/md";
-import { BsFillBarChartFill } from "react-icons/bs";
-import { RiPieChartLine } from "react-icons/ri";
-import { MdOutlineSsidChart } from "react-icons/md";
+import { useState } from "react";
+import { motion } from 'framer-motion';
 import { FaSpotify } from "react-icons/fa6";
-import { useState } from "react"
+import { MdDataArray, MdOutlineSsidChart } from "react-icons/md";
+import { RiBarChart2Line, RiPieChartLine } from "react-icons/ri";
+import { CiViewTable } from "react-icons/ci";
+import { HiOutlinePresentationChartLine } from "react-icons/hi";
 
 import { Sidebar, SidebarBody, SidebarLink } from "../ui/sidebar";
-import { motion } from 'framer-motion';
 
 const links = [
 	{
-		label: "Dashboard",
-		href: "#",
+		label: "Key metrics",
+		href: "#metrics",
 		icon: (
 			<MdDataArray className="flex-shrink-0 w-5 h-5 text-neutral-700 " />
 		),
 	},
 	{
-		label: "Trending songs",
-		href: "#",
+		label: "User growth",
+		href: "#user-growth",
 		icon: (
-			<BsFillBarChartFill className="flex-shrink-0 w-5 h-5 text-neutral-700 " />
+			<MdOutlineSsidChart className="flex-shrink-0 w-5 h-5 text-neutral-700 " />
 		),
 	},
 	{
 		label: "Revenue distribution",
-		href: "#",
+		href: "#revenue-distribution",
 		icon: (
 			<RiPieChartLine className="flex-shrink-0 w-5 h-5 text-neutral-700 " />
 		),
 	},
 	{
-		label: "User growth",
-		href: "#",
+		label: "Top streaming songs",
+		href: "#top-streamed-songs",
 		icon: (
-			<MdOutlineSsidChart className="flex-shrink-0 w-5 h-5 text-neutral-700 " />
+			<RiBarChart2Line className="flex-shrink-0 w-5 h-5 text-neutral-700 " />
+		),
+	},
+	{
+		label: "Recent streams",
+		href: "#recent-streams",
+		icon: (
+			<CiViewTable className="flex-shrink-0 w-5 h-5 text-neutral-700 " />
+		),
+	},
+	{
+		label: "Marketing campaigns",
+		href: "#marketing-campaign",
+		icon: (
+			<HiOutlinePresentationChartLine className="flex-shrink-0 w-5 h-5 text-neutral-700 " />
 		),
 	},
 ];
