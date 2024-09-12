@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# Streamify Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Your music, your way
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is an admin dashboard of a music streaming platform called "Streamify".
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Language: [TypeScript](https://www.typescriptlang.org/)
+- Library: [React](https://react.dev/)
+- Bundling: [Vite](https://vitejs.dev/)
+- Styling: [Tailwind CSS](https://tailwindcss.com/)
+- Animation: [Framer Motion](https://www.framer.com/motion/)
+- Charts: [Recharts](https://recharts.org/en-US)
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Download data**: You can download the data in excel format.
+- **Key metrics**: Get a full glance of teh app from 6 key metrics.
+- **User growth**: Get an idea of the total userbase with respect to the active user base.
+- **Revenue distribution**: Understand how different sources are responsible for your revenue.
+- **Top streamed songs**: Know what's trending on your platform.
+- **Recent streams**: See what your users are currently listening to.
+- **Marketing Campaign**: Study how different marketing campaigns helped your business.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Set-up
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+You need to have Node.js 20+ installed in your machine.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the application into your local machine using `git clone <repo-url>`.
+2. Open the directory into your terminal and install dependencies using `npm i`.
+3. Execute `npm run dev` in the same directory. Open [http://localhost:5173](http://localhost:5173) in your browser.
