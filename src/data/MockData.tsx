@@ -52,9 +52,9 @@ export const KEY_METRICS = [
 ]
 
 export const USER_GROWTH = [
-	{ month: "Oct 2023", "Total users": 1150000, "Active users": 520000 },
-	{ month: "Nov 2023", "Total users": 1175000, "Active users": 535000 },
-	{ month: "Dec 2023", "Total users": 1195000, "Active users": 550000 },
+	{ month: "Oct 2024", "Total users": 1150000, "Active users": 520000 },
+	{ month: "Nov 2024", "Total users": 1175000, "Active users": 535000 },
+	{ month: "Dec 2024", "Total users": 1195000, "Active users": 550000 },
 	{ month: "Jan 2024", "Total users": 1110000, "Active users": 562000 },
 	{ month: "Feb 2024", "Total users": 1125000, "Active users": 573000 },
 	{ month: "Mar 2024", "Total users": 1135000, "Active users": 881000 },
@@ -82,21 +82,21 @@ export const TOP_STREAMING_SONGS = [
 ]
 
 export const RECENT_STREAMS = [
-	{ songName: "Anti-Hero", artist: "Taylor Swift", streamDate: "2023-09-01", streamCount: 2345, userId: "user123" },
-	{ songName: "As It Was", artist: "Harry Styles", streamDate: "2023-09-02", streamCount: 1987, userId: "user456" },
-	{ songName: "About Damn Time", artist: "Lizzo", streamDate: "2023-09-03", streamCount: 1654, userId: "user789" },
-	{ songName: "As the World Caves In", artist: "Sarah Cothran", streamDate: "2023-09-04", streamCount: 1345, userId: "user101" },
-	{ songName: "Watermelon Sugar", artist: "Harry Styles", streamDate: "2023-09-05", streamCount: 1098, userId: "user112" },
-	{ songName: "As It Was", artist: "Harry Styles", streamDate: "2023-09-06", streamCount: 987, userId: "user123" },
-	{ songName: "Anti-Hero", artist: "Taylor Swift", streamDate: "2023-09-07", streamCount: 876, userId: "user456" },
-	{ songName: "About Damn Time", artist: "Lizzo", streamDate: "2023-09-08", streamCount: 765, userId: "user789" },
-	{ songName: "Blinding Lights", artist: "The Weeknd", streamDate: "2023-09-09", streamCount: 2156, userId: "user234" },
-	{ songName: "Shape of You", artist: "Ed Sheeran", streamDate: "2023-09-10", streamCount: 1876, userId: "user345" },
-	{ songName: "Dance Monkey", artist: "Tones and I", streamDate: "2023-09-11", streamCount: 1543, userId: "user456" },
-	{ songName: "Someone You Loved", artist: "Lewis Capaldi", streamDate: "2023-09-12", streamCount: 1432, userId: "user567" },
-	{ songName: "Levitating", artist: "Dua Lipa", streamDate: "2023-09-13", streamCount: 1321, userId: "user678" },
-	{ songName: "Drivers License", artist: "Olivia Rodrigo", streamDate: "2023-09-14", streamCount: 1210, userId: "user789" },
-	{ songName: "Stay", artist: "The Kid LAROI & Justin Bieber", streamDate: "2023-09-15", streamCount: 1109, userId: "user890" },
+	{ songName: "Anti-Hero", artist: "Taylor Swift", streamDate: "2024-09-01", streamCount: 2345, userId: "user123" },
+	{ songName: "As It Was", artist: "Harry Styles", streamDate: "2024-09-02", streamCount: 1987, userId: "user456" },
+	{ songName: "About Damn Time", artist: "Lizzo", streamDate: "2024-09-03", streamCount: 1654, userId: "user789" },
+	{ songName: "As the World Caves In", artist: "Sarah Cothran", streamDate: "2024-09-04", streamCount: 1345, userId: "user101" },
+	{ songName: "Watermelon Sugar", artist: "Harry Styles", streamDate: "2024-09-05", streamCount: 1098, userId: "user112" },
+	{ songName: "As It Was", artist: "Harry Styles", streamDate: "2024-09-06", streamCount: 987, userId: "user123" },
+	{ songName: "Anti-Hero", artist: "Taylor Swift", streamDate: "2024-09-07", streamCount: 876, userId: "user456" },
+	{ songName: "About Damn Time", artist: "Lizzo", streamDate: "2024-09-08", streamCount: 765, userId: "user789" },
+	{ songName: "Blinding Lights", artist: "The Weeknd", streamDate: "2024-09-09", streamCount: 2156, userId: "user234" },
+	{ songName: "Shape of You", artist: "Ed Sheeran", streamDate: "2024-09-10", streamCount: 1876, userId: "user345" },
+	{ songName: "Dance Monkey", artist: "Tones and I", streamDate: "2024-09-11", streamCount: 1543, userId: "user456" },
+	{ songName: "Someone You Loved", artist: "Lewis Capaldi", streamDate: "2024-09-12", streamCount: 1432, userId: "user567" },
+	{ songName: "Levitating", artist: "Dua Lipa", streamDate: "2024-09-13", streamCount: 1321, userId: "user678" },
+	{ songName: "Drivers License", artist: "Olivia Rodrigo", streamDate: "2024-09-14", streamCount: 1210, userId: "user789" },
+	{ songName: "Stay", artist: "The Kid LAROI & Justin Bieber", streamDate: "2024-09-15", streamCount: 1109, userId: "user890" },
 ]
 
 export const CAMPAIGN_DATA = [

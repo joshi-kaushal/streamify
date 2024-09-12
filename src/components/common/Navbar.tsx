@@ -29,12 +29,12 @@ export default function Navbar() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.2 }}
 				>
-					<button className="px-4 py-2 font-bold text-white transition duration-300 bg-red-500 rounded hover:bg-red-600">
-						Log Out
-					</button>
-					<button className="px-4 py-2 font-bold text-white transition duration-300 bg-green-500 rounded hover:bg-green-600">
-						Open Streamify
-					</button>
+					<a href="https://www.loom.com/share/6158ca8c713446db8f9713f15f4d2dd3?sid=1fc4aabf-27c5-4fae-bea5-84b4710c3da7" target='_blank' rel='noreferrer noopener' className="px-4 py-2 font-bold text-white transition duration-300 bg-purple-600 rounded hover:bg-purple-500">
+						View demo on Loom
+					</a>
+					<a href='https://github.com/joshi-kaushal/streamify' target='_blank' rel='noreferrer noopener' className="px-4 py-2 font-bold text-white transition duration-300 rounded bg-slate-800 hover:bg-slate-700">
+						Open GitHub
+					</a>
 				</motion.div>
 			</div>
 		</div>

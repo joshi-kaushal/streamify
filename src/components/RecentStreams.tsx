@@ -7,7 +7,7 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table"
-import { ChevronDown, ChevronUp } from "lucide-react"
+import { ChevronDown, ChevronUp, Search, X } from "lucide-react"
 
 import { RECENT_STREAMS } from '@/data/MockData'
 import ChartWrapper from './common/ChartWrapper'
@@ -17,7 +17,7 @@ type SortableColumns = "songName" | "artist" | "streamDate" | "streamCount"
 export default function RecentStreams() {
 	const [sortColumn, setSortColumn] = useState<SortableColumns | null>(null)
 	const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc')
-	const [filters, setFilters] = useState({ artist: '', songName: '' })
+	const [filters, setFilters] = useState<Filters>({ artist: '', songName: '' })
 
 	const sortedAndFilteredData = useMemo(() => {
 		const filteredData = RECENT_STREAMS.filter(stream =>
@@ -45,9 +45,12 @@ export default function RecentStreams() {
 		}
 	}
 
-	const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>, key: keyof typeof filters) => {
-		setFilters(prev => ({ ...prev, [key]: e.target.value }))
-	}
+	const handleFilterChange = (
+		e: React.ChangeEvent<HTMLInputElement> | { target: { value: string } },
+		key: keyof Filters
+	) => {
+		setFilters(prev => ({ ...prev, [key]: e.target.value }));
+	};
 
 	return (
 		<ChartWrapper
@@ -56,22 +59,9 @@ export default function RecentStreams() {
 			data={RECENT_STREAMS}
 			fileName='Recent Streams'
 		>
-			<div className="flex flex-col gap-2 mb-4 md:flex-row">
-				<input
-					type="text"
-					placeholder="Filter by artist"
-					value={filters.artist}
-					onChange={(e) => handleFilterChange(e, 'artist')}
-					className="p-2 border rounded"
-				/>
-				<input
-					type="text"
-					placeholder="Filter by song name"
-					value={filters.songName}
-					onChange={(e) => handleFilterChange(e, 'songName')}
-					className="p-2 border rounded"
-				/>
-			</div>
+
+			<FilterComponent filters={filters} handleFilterChange={handleFilterChange} />
+
 			<div className="my-2 border rounded-md">
 				<Table>
 					<TableHeader>
@@ -121,4 +111,73 @@ export default function RecentStreams() {
 			</div>
 		</ChartWrapper>
 	)
+}
+
+const FilterComponent = ({ filters, handleFilterChange }: FilterComponentProps) => {
+	const clearFilter = (filterName: keyof Filters) => {
+		handleFilterChange({ target: { value: '' } }, filterName);
+	};
+
+	return (
+		<div className="flex flex-col gap-4 md:flex-row">
+			<div className="flex-1">
+				<label htmlFor="artist-filter" className="block mb-1 text-sm font-medium text-gray-700">
+					Artist
+				</label>
+				<div className="relative">
+					<input
+						id="artist-filter"
+						type="text"
+						placeholder="Filter by artist"
+						value={filters.artist}
+						onChange={(e) => handleFilterChange(e, 'artist')}
+						className="w-full p-2 pl-10 pr-10 transition-all duration-300 ease-in-out border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+					/>
+					<Search className="absolute text-gray-400 transform -translate-y-1/2 left-3 top-1/2" size={18} />
+					{filters.artist && (
+						<button
+							onClick={() => clearFilter('artist')}
+							className="absolute text-gray-400 transform -translate-y-1/2 right-3 top-1/2 hover:text-gray-600"
+						>
+							<X size={18} />
+						</button>
+					)}
+				</div>
+			</div>
+			<div className="flex-1">
+				<label htmlFor="song-filter" className="block mb-1 text-sm font-medium text-gray-700">
+					Song Name
+				</label>
+				<div className="relative">
+					<input
+						id="song-filter"
+						type="text"
+						placeholder="Filter by song name"
+						value={filters.songName}
+						onChange={(e) => handleFilterChange(e, 'songName')}
+						className="w-full p-2 pl-10 pr-10 transition-all duration-300 ease-in-out border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+					/>
+					<Search className="absolute text-gray-400 transform -translate-y-1/2 left-3 top-1/2" size={18} />
+					{filters.songName && (
+						<button
+							onClick={() => clearFilter('songName')}
+							className="absolute text-gray-400 transform -translate-y-1/2 right-3 top-1/2 hover:text-gray-600"
+						>
+							<X size={18} />
+						</button>
+					)}
+				</div>
+			</div>
+		</div>
+	);
+};
+
+interface Filters {
+	artist: string;
+	songName: string;
+}
+
+interface FilterComponentProps {
+	filters: Filters;
+	handleFilterChange: (e: React.ChangeEvent<HTMLInputElement> | { target: { value: string } }, filterName: keyof Filters) => void;
 }
