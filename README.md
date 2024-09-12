@@ -6,6 +6,8 @@ Your music, your way
 
 This is an admin dashboard of a music streaming platform called "Streamify".
 
+## 👨‍💻 [Live demo](https://streamify-eight-pi.vercel.app/) | 📽️ [Loom video](https://www.loom.com/share/6158ca8c713446db8f9713f15f4d2dd3?sid=fc09983a-de9b-465b-9e31-9e78822068ef)
+
 ## Tech stack
 
 - Language: [TypeScript](https://www.typescriptlang.org/)
